@@ -3,6 +3,25 @@
 ### Run in terminal: 
 - Clone the repository: `git clone git@github.com:ltn18/SMS-verification-frontend.git`
 - Install node_modules/necessary packages: `npm i`
+### Setting up .env file
+- Create a .env file of the structure down below: 
+```
+# server config
+PORT=3000
+HOST=localhost
+HOST_URL=http://localhost:3000
+BACKEND_API_DOMAIN=http://localhost:8080
+
+# firebase db config
+API_KEY=
+AUTH_DOMAIN=
+DATABASE_URL=
+PROJECT_ID=
+STORAGE_BUCKET=
+MESSAGING_SENDER_ID=
+APP_ID=
+MEASUREMENT_ID=
+```
 ### Run Frontend
 - To start the frontend, run in your terminal: `npm start`
 - Your frontend will be running on: `http://localhost:3000`

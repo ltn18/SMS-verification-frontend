@@ -10,6 +10,8 @@ const App = () => {
   const [errorCode, setErrorCode] = useState("You must type in Access Code");
   const [verified, setVerified] = useState(false);
 
+  // POST: handle when phone number is submitted to backend
+  // to: http://localhost:8080/api/user
   const handleSubmitPhoneNumber = async () => {
     if (validPhoneNumber(phoneNumber)) {
       setValidPhone(true);
@@ -26,6 +28,8 @@ const App = () => {
     } else setValidPhone(false);
   };
 
+  // POST: handle when access code is submitted to backend
+  // to: http://localhost:8080/api/user/${phoneNumber}
   const handleSubmitAccessCode = async () => {
     if (validAccessCode(accessCode)) {
       setValidCode(true);
@@ -44,6 +48,8 @@ const App = () => {
     } else setValidCode(false);
   };
 
+  // POST: handle when access code is submitted to backend
+  // to: http://localhost:8080/api/user/${phoneNumber}/newCode
   const handleSendNewCode = async () => {
     if (validPhoneNumber(phoneNumber)) {
       setValidPhone(true);
@@ -60,12 +66,10 @@ const App = () => {
     } else setValidPhone(false);
   };
 
-  // @desc: checking if a phone number is a valid.
-  //        We may assume that the phone number has 10
-  //        10 digits since we need to send a valid text
-  //        for testing using twilio.
-  // @param: s - a string representing phone number
-  // @return: true if s is a valid phone number; otherwise false
+  // Checking if a phone number is a valid.
+  // We may assume that the phone number has 10
+  // 10 digits since we need to send a valid text
+  // for testing using twilio.
   const validPhoneNumber = (s) => {
     if (s === undefined) {
       setErrorPhone("You must type in Phone Number");
@@ -88,11 +92,9 @@ const App = () => {
     return true;
   };
 
-  // @desc: checking if an access code is valid.
-  //        We may assume that all 6 digits range
-  //        from 0 to 9.
-  // @param: s - a string representing access code
-  // @return: true if s is a valid access code; otherwise false
+  // Checking if an access code is valid.
+  // We may assume that all 6 digits range
+  // from 0 to 9.
   const validAccessCode = (s) => {
     if (s === undefined) {
       setErrorCode("You must type in Access Code");

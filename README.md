@@ -6,6 +6,7 @@
 ### Run Frontend
 - To start the frontend, run in your terminal: `npm start`
 - Your frontend will be running on: `http://localhost:3000`
-## Demo pictures with explanation
-
+## Testing
+- Since we can only send messages from TWILIO to verified users, I will test all the method with my phone number only. You may have to verify your phone number to effectively test.
+### 
 

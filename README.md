@@ -1,4 +1,32 @@
 # SMS Verification Frontend
+## Frontend's Structure
+```
+├── public
+│   ├── active_numbers_twilio_PNG
+│   ├── texts_sent.jpg
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+|   ├── robots.txt
+│   └── manifest.json
+├── src
+│   ├── App.js
+│   ├── App.css
+│   ├── App.text.js
+│   ├── axios.js
+│   ├── firebase.js
+│   ├── index.js
+│   ├── index.css
+│   ├── logo.svg
+│   ├── serviceWorker.js
+│   └── setupTests.js
+├── yarn.lock
+├── .gitignore
+├── README.md
+├── package-lock.json
+└── package.json
+```
 ## How to run
 ### Run in terminal: 
 - Clone the repository: `git clone git@github.com:ltn18/SMS-verification-frontend.git`
